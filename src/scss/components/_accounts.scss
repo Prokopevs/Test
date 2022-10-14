@@ -1,0 +1,28 @@
+.accounts {
+    min-height: 160px;
+    min-width: 200px;
+    background-color: #ebe8e8;
+    position: absolute;
+
+    right: 10px;
+    top: 35px;
+    z-index: 3;
+    border-radius: 7px;
+    border: 2px solid #030303;
+    padding: 10px 15px;
+}
+
+.accounts__text {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 7px 5px;
+    transition: color .1s linear;
+    color: rgb(106, 106, 104);
+    cursor: pointer;
+
+    &:hover {
+        color:#000000;
+    }
+}
