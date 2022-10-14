@@ -1,18 +1,18 @@
-import React from "react";
-import { IData } from "./Table";
+import React from "react"
+import { IData } from "./Table"
 
 interface IAccounts {
-    setAccountNumber: (...arg: string[]) => void;
-    active: (...arg: boolean[]) => void;
-    items: IData[];
+    active: (...arg: boolean[]) => void
+    items: IData[]
+    setValue: any
 }
 
-const Accounts: React.FC<IAccounts> = ({ setAccountNumber, active, items }) => {
-    const accountsArr = items.map((element) => element.accounts);
+const Accounts: React.FC<IAccounts> = ({ active, items, setValue }) => {
+    const accountsArr = items.map((element) => element.accounts)
     const handleClick = (item: string) => {
-        setAccountNumber(item);
-        active(false);
-    };
+        active(false)
+        setValue("accounts", item)
+    }
     return (
         <div className="accounts">
             <ul>
@@ -27,7 +27,7 @@ const Accounts: React.FC<IAccounts> = ({ setAccountNumber, active, items }) => {
                 ))}
             </ul>
         </div>
-    );
-};
+    )
+}
 
-export default Accounts;
+export default Accounts

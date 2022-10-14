@@ -1,26 +1,26 @@
-import React from "react";
-import { Dispatch, SetStateAction } from "react";
-import { getData } from "../fetch/getData";
+import React from "react"
+import { Dispatch, SetStateAction } from "react"
+import { getData } from "../fetch/getData"
 
 export interface IData {
-    number: number;
-    date: string;
-    accounts: string;
-    correspondent: string;
-    income: string;
+    number: number
+    date: string
+    accounts: string
+    correspondent: string
+    income: string
 }
 
 type ITable = {
-    data: IData[];
-    setData: Dispatch<SetStateAction<IData[]>>;
-};
+    data: IData[]
+    setData: Dispatch<SetStateAction<IData[]>>
+}
 
 const Table: React.FC<ITable> = ({ data, setData }) => {
-    const [loading, setLoading] = React.useState(false);
+    const [loading, setLoading] = React.useState(false)
 
     React.useEffect(() => {
-        getData(setData, setLoading);
-    }, []);
+        getData(setData, setLoading)
+    }, [])
 
     return loading ? (
         <div className="loading">Идет загрузка...</div>
@@ -47,7 +47,7 @@ const Table: React.FC<ITable> = ({ data, setData }) => {
                 ))}
             </tbody>
         </table>
-    );
-};
+    )
+}
 
-export default Table;
+export default Table
