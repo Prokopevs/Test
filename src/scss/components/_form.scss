@@ -42,15 +42,15 @@
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    background-color: rgb(67, 251, 116);
+    background-color: rgb(85, 119, 255);
     transition: background-color .1s linear;
 
     &:hover {
-        background-color: rgb(40, 235, 92);
+        background-color: rgb(57, 96, 255);
     }
 
     &:disabled  {
-        background-color: rgb(167, 244, 188);
+        background-color: rgb(174, 190, 255);
     }
 }
 

@@ -76,7 +76,7 @@ const Form: React.FC<IForm> = ({ setCalendarActive, date, items, setData }) => {
                                         ? "form__input error required maxWidth"
                                         : "form__input required maxWidth"
                                 }
-                                {...register("accounts", { minLength: 1 })}
+                                {...register("accounts", { required: true })}
                                 value={accountNumber}
                                 onChange={(e) => setAccountNumber(e.target.value)}
                             ></input>
