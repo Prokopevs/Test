@@ -12,7 +12,6 @@ const CommonInput: React.FC<ICommonInput> = ({ register, ruName, enName }) => {
             <div className="form__inner_first">
                 <p className="form__inner_text">{ruName}:</p>
             </div>
-
             <div className="form__inner_second">
                 <input className="form__input maxWidth" {...register(enName)}></input>
             </div>
